@@ -1,0 +1,281 @@
+* {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 250px;
+    height: 7%;
+}
+
+img1 {
+    width: 1000px;
+    height: 1000px;
+}
+
+body {
+    Background: linear-gradient(180deg, #FFDBE8, #FF94B2);
+    color: #333;
+    /* CORREÇÃO: Unidade 'cm' não é ideal para telas. Use um valor sem unidade. */
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(235deg, #FF94B2, #F24455, #E5203A);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.zoom:hover {
+    font-size: 120%;
+}
+
+
+/* CORREÇÃO: Seletor específico para os links dentro da navegação */
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    /* Alterado para branco para melhor contraste inicial */
+    font-weight: 500;
+    /* CORREÇÃO: Sintaxe correta para segundos (s) */
+    transition: color 0.3s;
+}
+
+
+/* CORREÇÃO: Seletor específico para o hover do link */
+
+header nav a:hover {
+    color: #ff00d4;
+}
+
+.sessão {
+    padding: 60px 40px;
+    background: #ede6e6;
+    margin: 20px;
+    /* Removido 'auto' para consistência se houver mais seções lado a lado */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CORREÇÃO: Seletor para o H2 DENTRO da seção */
+
+.sessão h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: hsl(0, 16%, 47%);
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* CORREÇÃO: Seletor para os parágrafos DENTRO da seção */
+
+.sessão p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.bloco-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bloco {
+    color: #ffffff;
+    font-size: 40px;
+    font-style: arial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background: #ff009d;
+    padding: 70px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloco:hover {
+    /* CORREÇÃO: A propriedade para mover é 'transform'. */
+    transform: translateY(-5px);
+    background-color: #ffdd00;
+    /* CORREÇÃO: box-shadow precisa de valores de deslocamento e cor. */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.apres1,
+.apres2,
+.apres3 {
+    font-display: flex;
+    color: #ffffff;
+    font-size: 10rem;
+    font-style: arial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background: #ff009d;
+    border-radius: 10px;
+    padding-top: 500px;
+    padding-bottom: 500px;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ESTADO :hover (O que acontece QUANDO o mouse está sobre o elemento) */
+
+
+/* ESTADO :hover (Quando o mouse está sobre o card) */
+
+.apres1:hover,
+.apres2:hover,
+.apres3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    ;
+}
+
+.bloco h3 {
+    padding: 10px;
+    color: #1e3a8a;
+}
+
+footer {
+    background: linear-gradient(160deg, #ff009d, #ffdd00);
+    color: #fff;
+    text-align: center;
+    /* Adicionado para centralizar o conteúdo */
+    padding: 20px;
+    margin-top: 40px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+ul {
+    gap: 30px;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 120%;
+    /* Ajustado para melhor encaixe */
+}
+
+
+/* --- ESTILOS DA ANIMAÇÃO WAVE --- */
+
+.wave-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza as barras */
+    align-items: center;
+    /* Alinha na base */
+    gap: 5px;
+    padding: 50px 0;
+    /* Adiciona espaçamento */
+    min-height: 00px;
+}
+
+.bar {
+    width: 4px;
+    height: 8px;
+    border-radius: 5px;
+    /* CORREÇÃO: 'bottom' faz a barra crescer para cima */
+    transform-origin: 50%;
+}
+
+.bar {
+    background: linear-gradient(180deg, #ff009d, #ffdd00);
+}
+
+.bar.animate {
+    animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleY(1);
+        background: pink;
+    }
+    50% {
+        transform: scaleY(8);
+        background: rgb(255, 0, 149);
+    }
+    100% {
+        transform: scaleY(4);
+        background: rgb(255, 208, 0);
+        /* Aumentado para um efeito mais visível */
+    }
+}
+
+.barsection {
+    text-align: center;
+    z-index: 0;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.bloco:nth-child(1) {
+    background-image: url("Fone.jpg");
+}
+
+.bloco:nth-child(2) {
+    background-image: url("Relogio.jpg");
+}
+
+.bloco:nth-child(3) {
+    background-image: url("Team.jpg");
+}
+
+.apres1 {
+    background-image: url("Ouvindo1.jpg");
+}
+
+.apres2 {
+    background-image: url("Ouvindo2.jpg");
+}
+
+.apres3 {
+    background-image: url("Ouvindo3.jpg");
+}
+
+.center,
+hummor {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Truque para centralização perfeita */
+    color: white;
+    text-align: center;
+    color: #ffffff;
+}
+
+hummor {
+    font-size: 2rem;
+}
+
+hummor:hover {
+    color: #ff009d;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
