@@ -273,6 +273,7 @@ hummor {
 
 hummor {
     font-size: 2rem;
+    color:black;
 }
 
 hummor:hover {
@@ -280,3 +281,4 @@ hummor:hover {
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 
 }
+
