@@ -237,27 +237,27 @@ ul {
 }
 
 .bloco:nth-child(1) {
-    background-image: url("Images/Fone.jpg");
+    background-image: url("images/Fone.jpg");
 }
 
 .bloco:nth-child(2) {
-    background-image: url("Images/Relogio.jpg");
+    background-image: url("images/Relogio.jpg");
 }
 
 .bloco:nth-child(3) {
-    background-image: url("Images/Team.jpg");
+    background-image: url("images/Team.jpg");
 }
 
 .apres1 {
-    background-image: url("Images/Ouvindo1.jpg");
+    background-image: url("images/Ouvindo1.jpg");
 }
 
 .apres2 {
-    background-image: url("Images/Ouvindo2.jpg");
+    background-image: url("images/Ouvindo2.jpg");
 }
 
 .apres3 {
-    background-image: url("Images/Ouvindo3.jpg");
+    background-image: url("images/Ouvindo3.jpg");
 }
 
 .center,
@@ -278,6 +278,4 @@ hummor {
 hummor:hover {
     color: #ff009d;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-
 }
-
